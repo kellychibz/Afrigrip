@@ -417,6 +417,167 @@ header.scrolled {
     transform: scale(1.05);
 }
 
+
+
+/* Our Fleet Section - Gallery Style */
+.fleet {
+    background: var(--white);
+    padding: 5rem 0;
+}
+
+.fleet-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fleet-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.fleet-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.fleet-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.fleet-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+
+.fleet-item:hover .fleet-image img {
+    transform: scale(1.05);
+}
+
+.fleet-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(26, 58, 95, 0.95));
+    color: var(--white);
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(0);
+    transition: var(--transition);
+}
+
+.fleet-label h3 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.fleet-label p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+/* Coming Soon Item */
+.coming-soon .fleet-image {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-content {
+    text-align: center;
+    color: var(--white);
+    padding: 2rem;
+}
+
+.coming-soon-content i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.coming-soon-content h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.coming-soon-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Fleet Description */
+.fleet-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--light);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary);
+}
+
+.fleet-description p {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fleet-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .fleet-image {
+        height: 250px;
+    }
+    
+    .fleet-label {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .fleet-label h3 {
+        font-size: 1.2rem;
+    }
+    
+    .fleet-description {
+        padding: 1.5rem;
+    }
+    
+    .fleet-description p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .fleet-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .fleet-image {
+        height: 200px;
+    }
+}
+
 /* Stats Section */
 .stats {
     background: linear-gradient(rgba(26, 58, 95, 0.9), rgba(26, 58, 95, 0.95)), 
