@@ -1,0 +1,216 @@
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-img {
+        order: -1;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    /* Logo adjustments for tablet */
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo .tagline {
+        font-size: 0.7rem;
+    }
+    
+    .logo-img {
+        width: 140px;  /* Smaller width for tablet */
+        height: 47px;  /* Maintains 3:1 ratio */
+        background: transparent; /* Ensure transparent on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .navbar {
+        padding: 0.6rem 0;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .nav-links li {
+        margin: 1rem 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Logo adjustments for mobile */
+    .logo-text {
+        display: none; /* Hide text on mobile, show only logo */
+    }
+    
+    .logo-img {
+        width: 120px;  /* Smaller for mobile */
+        height: 40px;  /* Maintains 3:1 ratio */
+        background: transparent; /* Ensure transparent on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    /* Logo adjustments for small mobile */
+    .logo-img {
+        width: 100px;  /* Even smaller for phones */
+        height: 33px;  /* Maintains 3:1 ratio */
+        background: transparent; /* Ensure transparent on small mobile */
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    .logo-text {
+        display: none; /* Ensure text is hidden on very small screens */
+    }
+    
+    .logo {
+        gap: 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .logo-img {
+        width: 90px;   /* Minimal size for very small screens */
+        height: 30px;  /* Maintains 3:1 ratio */
+        background: transparent; /* Ensure transparent on very small screens */
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero-btns,
+    .mobile-menu,
+    .social-links {
+        display: none !important;
+    }
+    
+    .hero {
+        height: auto;
+        color: var(--dark);
+        background: none !important;
+    }
+    
+    /* Ensure logo prints properly */
+    .logo-text {
+        display: block !important;
+    }
+    
+    .logo-img {
+        width: 120px !important;
+        height: 40px !important;
+        background: transparent !important; /* Transparent for print */
+    }
+}
